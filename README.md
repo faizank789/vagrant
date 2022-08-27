@@ -17,3 +17,10 @@ To delete deployed setup
 
 #> vagrant destroy -f
 
+
+# ssh default [root] password is [redhat]
+
+just run  and bingo..
+
+#> ssh master -l root
+
