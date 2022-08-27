@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo kubeadm config images pull && \
-sudo kubeadm init --ignore-preflight-errors=all | sudo tee access_token.txt && \
+sudo kubeadm init --ignore-preflight-errors=all | sudo tee access_token.sh && \
 sudo grep  "kubeadm" access_token -A 1 > access_token.sh && \
 sudo kubeadm config images pull & \
 sudo kubeadm init --ignore-preflight-errors=all
