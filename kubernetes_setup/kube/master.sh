@@ -1,7 +1,8 @@
 #!/bin/bash
 
+ip=`hostname -I | awk '{print $1}'`
 sudo kubeadm config images pull && \
-sudo kubeadm init --token yi6muo.4ytkfl3l6vl8zfpk --apiserver-advertise-address=master --ignore-preflight-errors=all
+sudo kubeadm init --token yi6muo.4ytkfl3l6vl8zfpk --apiserver-advertise-address=$ip --ignore-preflight-errors=all
 sudo mkdir -p $HOME/.kube && \
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && \
 sudo chown $(id -u):$(id -g) $HOME/.kube/config && \
