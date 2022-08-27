@@ -11,9 +11,9 @@ here i have created two setup
 
 Go to respective directory then execute
 
-# vagrant up --provider=libvirt --no-parallel
+#> vagrant up --provider=libvirt --no-parallel
 
 To delete deployed setup
 
-# vagrant destroy -f
+#> vagrant destroy -f
 
