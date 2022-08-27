@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip=`hostname -I | awk '{print $1}'`
+ip=`dig master +short`
 sudo kubeadm config images pull && \
 sudo kubeadm init --token yi6muo.4ytkfl3l6vl8zfpk --apiserver-advertise-address=$ip --ignore-preflight-errors=all
 sudo mkdir -p $HOME/.kube && \
