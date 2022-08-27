@@ -24,19 +24,18 @@ Vagrant.configure("2") do |config|
     master.vm.box = "generic/centos7"
     master.vm.provision "shell", inline: "hostnamectl set-hostname master"
     master.vm.provision "shell", path: "basic/config.sh"
-    # master.vm.provision "shell", path: "docker/setup.sh"
-    # master.vm.provision "shell", path: "kube/setup.sh"
-    # master.vm.provision "shell", path: "kube/master.sh"
+    master.vm.provision "shell", path: "docker/setup.sh"
+    master.vm.provision "shell", path: "kube/setup.sh"
+    master.vm.provision "shell", path: "kube/master.sh"
   end
   # Worker
-  # config.vm.define "worker" do |worker|
-  #   worker.vm.hostname = "worker"
-  #   worker.vm.box = "generic/centos7"
-  #   worker.vm.network :private_network, ip: Worker_IP
-  #   worker.vm.provision "shell", inline: "hostnamectl set-hostname worker"
-  #   worker.vm.provision "shell", path: "basic/config.sh"
-  #   worker.vm.provision "shell", path: "docker/setup.sh"
-  #   worker.vm.provision "shell", path: "kube/setup.sh"
-  #   worker.vm.provision "shell", path: "kube/worker.sh"
-  # end
+  config.vm.define "worker" do |worker|
+    worker.vm.hostname = "worker"
+    worker.vm.box = "generic/centos7"
+    worker.vm.provision "shell", inline: "hostnamectl set-hostname worker"
+    worker.vm.provision "shell", path: "basic/config.sh"
+    worker.vm.provision "shell", path: "docker/setup.sh"
+    worker.vm.provision "shell", path: "kube/setup.sh"
+    worker.vm.provision "shell", path: "kube/worker.sh"
+  end
 end
