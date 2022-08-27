@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo kubeadm config images pull && \
-sudo kubeadm init --ignore-preflight-errors=all | sudo tee access_token.sh && \
-sudo grep  "kubeadm" access_token -A 1 > access_token.sh && \
-sudo kubeadm config images pull & \
+sudo kubeadm init --ignore-preflight-errors=all > token.txt && \
+sudo grep  "kubeadm" token.txt -A 1 > access_token.sh && \
+sudo kubeadm config images pull && \
 sudo kubeadm init --ignore-preflight-errors=all
 sudo mkdir -p $HOME/.kube && \
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && \
