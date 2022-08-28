@@ -6,13 +6,13 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 
 sudo apt update && sudo apt install vagrant && \ 
 
+sudo apt install build-essential && \
+
 sudo apt install vagrant-libvirt && \
 
 sudo vagrant plugin install vagrant-hostmanager && \
 
-sudo vagrant plugin install vagrant-libvirt && \
-
-sudo apt install build-essential && \ 
+sudo vagrant plugin install vagrant-libvirt && \ 
 
 sudo apt install sshpass
 
