@@ -38,9 +38,9 @@ Vagrant.configure("2") do |config|
     worker.vm.hostname = "worker"
     worker.vm.box = "generic/centos7"
     worker.vm.provision "shell", inline: "hostnamectl set-hostname worker"
-    # worker.vm.provision "shell", path: "basic/config.sh"
-    # worker.vm.provision "shell", path: "docker/setup.sh"
-    # worker.vm.provision "shell", path: "kube/setup.sh"
-    # worker.vm.provision "shell", path: "kube/worker.sh"
+    worker.vm.provision "shell", path: "basic/config.sh"
+    worker.vm.provision "shell", path: "docker/setup.sh"
+    worker.vm.provision "shell", path: "kube/setup.sh"
+    worker.vm.provision "shell", path: "kube/worker.sh"
    end
 end
