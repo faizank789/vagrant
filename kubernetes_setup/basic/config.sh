@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo -i && \
-sudo echo "redhat" | passwd --stdin root && \
+sudo echo "root" | passwd --stdin root && \
 yum update -y && \
 yum install wget git -y && \
 sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config && \

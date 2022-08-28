@@ -10,5 +10,7 @@ vagrant plugin install vagrant-hostmanager & \
 
 vagrant plugin install vagrant-libvirt & \
 
-sudo apt install build-essential & \
+sudo apt install build-essential & \ 
+
+sudo apt install sshpass
 
