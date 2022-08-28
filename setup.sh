@@ -8,9 +8,9 @@ sudo apt update && sudo apt install vagrant && \
 
 sudo apt install vagrant-libvirt && \
 
-vagrant plugin install vagrant-hostmanager && \
+sudo vagrant plugin install vagrant-hostmanager && \
 
-vagrant plugin install vagrant-libvirt && \
+sudo vagrant plugin install vagrant-libvirt && \
 
 sudo apt install build-essential && \ 
 
