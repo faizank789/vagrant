@@ -21,7 +21,6 @@ Vagrant.configure("2") do |config|
   # master
   config.vm.define "master" do |master|
     master.vm.hostname = "master"
-    master.vm.box = "generic/centos7"
     master.vm.provision "shell", inline: "hostnamectl set-hostname master"
     master.vm.provision "shell", path: "basic/config.sh"
     master.vm.provision "shell", path: "docker/setup.sh"
@@ -36,7 +35,6 @@ Vagrant.configure("2") do |config|
   # Worker
   config.vm.define "worker" do |worker|
     worker.vm.hostname = "worker"
-    worker.vm.box = "generic/centos7"
     worker.vm.provision "shell", inline: "hostnamectl set-hostname worker"
     worker.vm.provision "shell", path: "basic/config.sh"
     worker.vm.provision "shell", path: "docker/setup.sh"
