@@ -6,7 +6,7 @@ echo 'export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk' | sudo tee -a /etc/profil
 echo 'export JRE_HOME=/usr/lib/jvm/jre' | sudo tee -a /etc/profile && \
 source /etc/profile && \
 
-cd ~ 
+cd ~ && \
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo && \
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key && \
 yum install jenkins -y && \
