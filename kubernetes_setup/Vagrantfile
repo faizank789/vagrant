@@ -26,11 +26,11 @@ Vagrant.configure("2") do |config|
     master.vm.provision "shell", path: "docker/setup.sh"
     master.vm.provision "shell", path: "kube/setup.sh"
     master.vm.provision "shell", path: "kube/master.sh"
-    master.trigger.after :up do |trigger|
-    trigger.info = "Post config !!"
-    trigger.run = {inline: "bash -c 'sshpass -p 'root' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r root@master:/etc/kubernetes/admin.conf ~/.kube/config'"}
-  end
-
+  #   master.trigger.after :up do |trigger|
+  #   trigger.info = "Post config !!"
+  #   trigger.run = {inline: "bash -c 'sshpass -p 'root' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r root@master:/etc/kubernetes/admin.conf ~/.kube/config'"}
+  # end
+end 
   # Worker
   config.vm.define "worker" do |worker|
     worker.vm.hostname = "worker"
