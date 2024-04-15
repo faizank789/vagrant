@@ -17,7 +17,7 @@
 #> vagrant up --provider=libvirt --no-parallel
 ```
 
-- To delete deployed setup
+- To delete setup
 ```
 #> vagrant destroy -f
 ```
