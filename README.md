@@ -1,4 +1,5 @@
-![png-transparent-vagrant-original-wordmark-logo-icon](https://github.com/faizank789/vagrant/assets/22654388/b1e9cadc-09e6-49fa-b04c-5491080b0597)
+![featured-image](https://github.com/faizank789/vagrant/assets/22654388/b8424337-fcb0-4cc2-a04e-9668485ac411)
+
 
 # vagrant
 written by Faizan khan
