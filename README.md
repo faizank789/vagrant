@@ -2,9 +2,9 @@
 
 
 # vagrant
-written by Faizan khan
+- written by Faizan khan
 
-here i have created two setup 
+- Here i have created two setup for KVM VM
 1. local setup
 2. kubernertes setup   | Default [ One Master and One worker ]
 
@@ -12,12 +12,12 @@ here i have created two setup
 
 -----: Execution way :----
 
-Go to respective directory then execute
+- Go to respective directory then execute
 ```
 #> vagrant up --provider=libvirt --no-parallel
 ```
 
-To delete deployed setup
+- To delete deployed setup
 ```
 #> vagrant destroy -f
 ```
